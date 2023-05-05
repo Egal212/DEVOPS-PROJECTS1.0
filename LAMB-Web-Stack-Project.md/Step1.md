@@ -35,7 +35,7 @@ so we need to add a rule to EC2 configuration to open inbound connection through
 
 Our server is running and we can access it locally and from the Internet (Source 0.0.0.0/0 indicates ‘from any IP address’).
 
-* Run the following command to ensure that I can exchange data between endpoints from my device to the server : * 
+* Run the following command to ensure that I can exchange data between endpoints from my device to the server : 
 
 ```` 
 curl http://localhost:80
@@ -49,11 +49,11 @@ or
  The second command is trying to access it by IP address (in this case IP address 127.0.0.1 corresponds to DNS name ‘localhost’
  and the process of converting a DNS name to IP address is called "resolution"). 
  
- * Run ths command to test the  Apache HTTP server can respond to requests from the Internet. Open a web browser and try to access the following url. *
+ * Run ths command to test the  Apache HTTP server can respond to requests from the Internet. Open a web browser and try to access the following url. 
  ````
  http://<Public-IP-Address>:80
  ````
- * Usin the following command is an alternative to retrieving the Ip address rather than looking it up the AWS Mnagement Console *
+ * Usin the following command is an alternative to retrieving the Ip address rather than looking it up the AWS Mnagement Console 
  ````
  curl -s http://169.254.169.254/latest/meta-data/public-ipv4
  ````
