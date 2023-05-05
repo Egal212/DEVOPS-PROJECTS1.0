@@ -1,7 +1,7 @@
 # INSTALLING SQL #
 This satge we have installed our Apache webserver and we have it running, This process will detail the installation of our Database Management System (DBMS), which will enable us store and manage data for the website in a relational database. My SQL is a very popular relational datbase used within PHP environments.
 
-* Run the following command with the Ubuntu package manager 'apt' *
+* Run the following command with the Ubuntu package manager 'apt' 
 ````
 $ sudo apt install mysql-server
 ````
@@ -36,11 +36,11 @@ Running the security script that comes pre-installed with MySQL is advised. This
 ````
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
 ````
-* Run this commnd to exit the MySql shell; *
+* Run this commnd to exit the MySql shell; 
 ````
 mysql> exit
 ````
-* Run this script to start the security installation script; *
+* Run this script to start the security installation script; 
 ````
 $ sudo mysql_secure_installation
 ````
