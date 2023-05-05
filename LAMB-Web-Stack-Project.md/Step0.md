@@ -36,3 +36,21 @@ The followung instruction details how to ssh into the instance through the port 
 
 * Change the directory to the file where the downloaded PEM file is.
 ```ls
+cd ~/Downloads
+```
+#Note: This anchors <> indicates that specific values were added to that section which 
+was not disclosed for security reasons.
+
+The downloaded private key from the instance should be replaced with
+the anchored tags.. 
+
+* Change the permission for the private (.pem)keyfile.
+```ls
+sudo chmod 400 <private-key-name>.pem
+```
+* Connect to the running instance through ssh 
+
+``` ls
+ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
+```
+
