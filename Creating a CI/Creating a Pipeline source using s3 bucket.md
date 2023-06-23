@@ -2,7 +2,7 @@
 ## Amazon S3 or simple storage service is a service that provides object storage through a web service interface. It is highly scalable and reliable. 
 This service was used to store the application code that was used for this deployment. A function called versioning was enabled which saves various versions of objects stored.
 
-# HOW TO CREATE AN S3 BUCKET.
+# HOW TO CREATE AN S3 BUCKET USING THE AWS MANAGEMENT CONSOLE.
 * Navigate into AWS Management console  service s3.
 * Click the button to create a bucket, name the bucket , click enable versioning.
 * Go to permission remove the block all access button and include a policy that allows codepipeline to ‘Get object’ in that bucket.
