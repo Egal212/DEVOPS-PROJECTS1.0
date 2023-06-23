@@ -6,7 +6,7 @@ This service was used to store the application code that was used for this deplo
 * Navigate into AWS Management console  service s3.
 * Click the button to create a bucket, name the bucket , click enable versioning.
 * Go to permission remove the block all access button and include a policy that allows codepipeline to ‘Get object’ in that bucket.
-* Then upload the application code file into the s3 bucket.
+* Then upload the application code file into the s3 bucket. 
 
 ## The following are images of a created s3 bucket named glopipeline, the mage of the uploaded code and the bucket which was publicly accessible.
 
