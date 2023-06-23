@@ -19,11 +19,7 @@ appropriate times.
 
 # AWS TOOLS USED TO CREATE THE PIPELINE.
 * S3: Amazon S3 or simple storage service is a service that provides object storage through a web service interface. It is highly scalable and reliable. 
-This service was used to store the application code that was used for this deployment. A function called versioning was enabled which saves various versions of objects stored.
-# STEPS USED TO CREATE AN S3 BUCKET.
-* Navigate into AWS Management console  service s3.
-* Click the button to create a bucket, name the bucket , click enable versioning.
-* Go to permission remove the block all access button and include a policy that allows codepipeline to ‘Get object’ in that bucket.
-* Then upload the application code file into the S3 bucket.
-* ELASTIC BEANSTALK: 
-* CODE PIPELINE: 
+* ELASTIC BEANSTALK: The code will need a target environment containing virtual servers, or amazon ec2 instances, before it can be deployed. This environment was prepared using the elastic beanstalk.
+Elastic beanstalk is a platform as service that creates an environment that you can use to deploy your code with everything the code needs built into it. It provides capacity provisioning, autoscaling, load balancing.
+* CODE PIPELINE: AWS Codepipeline is a continuous delivery service that can be used for fast and reliable application updates.
+
