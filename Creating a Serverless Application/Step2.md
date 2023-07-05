@@ -69,5 +69,5 @@ Scroll all the way to the top, and click the ``copy`` icon next to the lambda fu
 Note this ARN down somewhere same as the email_reminder_lambda ARN.
 
 # STAGE 2- FINISH
-Currently, the lambda function which will be used to send emails on behalf of the serverless application has been configured. 
+Currently, the lambda function which will be used to send emails on behalf of the serverless application has been configured. At this point the architecture has been implemented where the email lambda function, given it the permission it requires to interact with the SES servie and indicate the FROM email address that was verified inside the SES servie.
 
