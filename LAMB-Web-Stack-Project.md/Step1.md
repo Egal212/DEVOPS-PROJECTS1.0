@@ -19,14 +19,14 @@ sudo apt install apache2
 ````ls
 sudo systemctl status apache2
 ````
-After running the code the green color indicates that your apahe web server is active in the operating system.
+After running the code the green color indicates that your apache web server is active in the operating system.
 
 NOTE: Networks distribute traffic through ports endpoints that are configured by the user, it is safe praticse to open 
-port only when they are in use to avoid unwanted acces to your data.
+port only when they are in use to avoid unwanted access to your data.
 Inorder to receive traffic to our Web Server ,the TCP port 80 which is the default port for http  which web browsers use to 
 access web pages on the internet needs to be opened. 
 
-In the Ec2 instance the TCP port 22 is opned by deafult after launching the instance which enables access via the SSH,
+In the Ec2 instance the TCP port 22 is opened by default after launching the instance which enables access via the SSH,
 A rule needs to be added to the EC2 configuration to open inbound connection through port 80:
 
 
