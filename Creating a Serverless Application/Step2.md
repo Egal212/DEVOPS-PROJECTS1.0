@@ -26,6 +26,29 @@ Pick to Use an existing role
 Click the Existing Role dropdown and pick LambdaRole 
 Click Create Function.
 
-# CONGIGURE THE email_reminder_lambda function.
+# CONFIGURE THE email_reminder_lambda FUNCTION.
+Scroll down, to Function code in the lambda_function code box, select all the code and delete it.
+
+Paste in this code 
+"ls 
+import boto3, os, json
+
+FROM_EMAIL_ADDRESS = 'REPLACE_ME'
+
+ses = boto3.client('ses')
+
+def lambda_handler(event, context):
+    # Print event data to logs .. 
+    print("Received event: " + json.dumps(event))
+    # Publish message directly to email, provided by EmailOnly or EmailPar TASK
+    ses.send_email( Source=FROM_EMAIL_ADDRESS,
+        Destination={ 'ToAddresses': [ event['Input']['email'] ] }, 
+        Message={ 'Subject': {'Data': 'Whiskers Commands You to attend!'},
+            'Body': {'Text': {'Data': event['Input']['message']}}
+        }
+    )
+    return 'Success!'
+  "
+
 
 
