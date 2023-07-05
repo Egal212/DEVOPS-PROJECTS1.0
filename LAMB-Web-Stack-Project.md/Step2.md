@@ -1,5 +1,5 @@
 # INSTALLING SQL #
-This satge we have installed our Apache webserver and we have it running, This process will detail the installation of our Database Management System (DBMS), which will enable us store and manage data for the website in a relational database. My SQL is a very popular relational datbase used within PHP environments.
+This stage we have installed our Apache webserver and we have it running, This process will detail the installation of our Database Management System (DBMS), which will enable us store and manage data for the website in a relational database. My SQL is a very popular relational datbase used within PHP environments.
 
 * Run the following command with the Ubuntu package manager 'apt' 
 ````
