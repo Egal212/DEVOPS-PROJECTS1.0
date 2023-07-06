@@ -25,4 +25,4 @@ Click ``Create Function``
  Click ``Deploy`` to save the lambda function and configuration.
 
  # CREATE API
- 
+ The api lambda function has been created, the next step is to create the api Gateway, 
