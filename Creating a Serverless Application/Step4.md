@@ -12,3 +12,17 @@ for ``Runtime`` use ``Python 3.9``
 Expand ``Change default execution role``
 Select ``Use an existing role``
 Choose the ``LambdaRole`` from the dropdown
+Click ``Create Function``
+ This is the lambda function that will support the Api Gateway.
+
+ # CONFIGURE THE LAMBDA FUNCTION 
+ Scroll down and remive all the coe from the lambda_function text box. Open this link in a new tab https://learn-cantrill-labs.s3.amazonaws.com/aws-serverless-pet-cuddle-o-tron/api_lambda.py and copy it to your clipboard.
+ Select the existing lambda code and delete it.
+ Paste the code into the lambda function.
+
+ This is the function which will compute to API Gateway.
+ For the code pasted in the link above, you need to locate the ``YOUR_STATEMACHINE_ARN`` placeholder and replace this with the State Machine ARN you noted down in the previous step.
+ Click ``Deploy`` to save the lambda function and configuration.
+
+ # CREATE API
+ 
