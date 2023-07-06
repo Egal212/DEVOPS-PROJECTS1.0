@@ -19,7 +19,7 @@ The role was given the logging permisiions, the ability to invoke the email lamb
 
 # CREATE THE STATE MACHINE.
 Navigate to the AWS Step Function Console
-Click the ``Hmaburger Menu`` at the top left and click the ``StateMachine``
+Click the ``Hamburger Menu`` at the top left and click the ``StateMachine``
 Click ``Create state Machine``
 Select ``Write your workflow in code`` which will allow you to use Amazon States Language
 Scroll down for ``type`` select ``standard``
