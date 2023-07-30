@@ -113,6 +113,9 @@ You should see a page like this, showing the content you’ve inserted in your t
 ````
 You should see a page like this, showing the content you’ve inserted in your test table:
 
+![Screenshot 2023-07-30 at 14 19 59](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/f096ea04-79d5-4ef5-976e-d47fd94a7df4)
+
+
 That means your PHP environment is ready to connect and interact with your MySQL server.
 
 Congratulations! In this guide, we have built a flexible foundation for serving PHP websites and applications to your visitors, using Nginx as web server and MySQL as database management system.
