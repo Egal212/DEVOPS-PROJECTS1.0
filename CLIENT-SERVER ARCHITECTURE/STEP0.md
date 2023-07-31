@@ -2,15 +2,15 @@
 * # CLIENT - SERVER ARCHITECTURE.
   A client-server architecture refers to an architecture in which two or more computers are connected together over a network to send and receive requests between one another.
 
-  # IMPLEMENTING A CLIENT-SERVER ARCHITECTURE BYUSING MYSQL DATABASE MAAGEMENT SYSTEMS. (DBMS)
-  * Launched and Configured two Linux-based Virtual server EC2 instanes in AWS Using the Ubuntu Distribution.
+  # IMPLEMENTING A CLIENT-SERVER ARCHITECTURE BY USING MYSQL DATABASE MANAGEMENT SYSTEMS. (DBMS)
+  * Launch and Configure two Linux-based Virtual server EC2 instanes in AWS Using the Ubuntu Distribution.
   * Names
     ````
     Server name A -Mysql Client.
     Server name B -Mysql Server.
     ````
 
-# SSH INTO THE MYsql SERVER FROM THE TERMINAL MAC/WINDOWS.
+# SSH INTO THE MYSQL SERVER FROM THE TERMINAL MAC/WINDOWS.
 After creating the EC2 web server , ssh into the virtual machine to create the infrasturcture needed for the web solution. Go to the terminal located in your computer.
 
 Change directory into the location where your PEM file is. Most likely will be in the Downloads folder.
