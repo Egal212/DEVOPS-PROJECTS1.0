@@ -108,4 +108,54 @@ To install the lvm
 ````
 sudo yum install lvm2 -y
 ````
+CREATE THE PHYSICAL VOLUME
+````
+sudo pvcreate /dev/xvdf1 /dev/xdvfg1 /dev/xvdh1
+````
+CREATE THE VOLUME GROUP
+````
+sudo vgcreate vg-database /dev/xvdf1 /dev/xdvfg1 /dev/xvdh1
+````
+CREATE THE LOGICAL VOLUME
+````
+sudo vgs
+sudo lvcreate -n db-lv -L 20G vg-database
+sudo lvs
+````
+CREATE MOUNT POINTS
+````
+sudo mkdir /db
+````
+Before mounting make file systems
+````
+sudo mkfs.ext4 /dev/vg-database/db-lv
+sudo ls -l /db
+````
+Mount using  this code:
+````
+sudo mount /dev/vg-database/db-lv /db
+df -h
+````
+To make the mount persistent.
+````
+sudo blkid
+````
+Copy UUID
+Update /etc/fstab
+````
+sudo vi /etc/fstab
+````
+#Comment mout for database
+Paste the UUID remove the " " /db ext4 defaults 0 0
+EXIT FROM VI USING :wqa!
+
+Mount, restart the daemon and update the OS using:
+````
+sudo mount -a
+sudo systemctl daemon -reload
+df-h
+sudo yum -y update
+````
+
+
 
