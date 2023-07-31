@@ -4,10 +4,13 @@
 
   # IMPLEMENTING A CLIENT-SERVER ARCHITECTURE BYUSING MYSQL DATABASE MAAGEMENT SYSTEMS. (DBMS)
   * Launched and Configured two Linux-based Virtual server EC2 instanes in AWS Using the Ubuntu Distribution.
-  * Name one - Mysql Client.
-             - Mysql Server.
+  * Names
+    ````
+    Server name A -Mysql Client.
+    Server name B -Mysql Server.
+    ````
 
-# SSH INTO THE MYSQL SERVER FROM THE TERMINAL MAC/WINDOWS.
+# SSH INTO THE MYsql SERVER FROM THE TERMINAL MAC/WINDOWS.
 After creating the EC2 web server , ssh into the virtual machine to create the infrasturcture needed for the web solution. Go to the terminal located in your computer.
 
 Change directory into the location where your PEM file is. Most likely will be in the Downloads folder.
