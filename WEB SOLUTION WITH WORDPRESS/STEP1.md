@@ -19,6 +19,10 @@ Server B - DATABASE SERVER (MYSQL)
 
 3. # SSH INTO THE WEBSERVER TERMINAL.
 Note: Don't forget to use ec2-user@<public-ip> for redhat OS.
+Update the server:
+````
+sudo yum -y update
+````
 Run this command:
 ````
 lsblk
