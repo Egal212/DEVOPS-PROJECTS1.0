@@ -1,4 +1,6 @@
-# AWS S3 BUCKET.
+
+# Creating a Pipeline source using AWS S3 BUCKET.
+
 ## Amazon S3 or simple storage service is a service that provides object storage through a web service interface. It is highly scalable and reliable. 
 This service was used to store the application code that was used for this deployment. A function called versioning was enabled which saves various versions of objects stored.
 
