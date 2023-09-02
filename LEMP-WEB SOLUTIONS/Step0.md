@@ -1,11 +1,11 @@
 A tech stack is the set of technologies used to develop an application, including programming languages, frameworks, databases, front-end and back-end tools, and APIs. Examples include;
-* LAMP : Linux, Apache, MySql, PHP,Pythpn or Perl.
-* LEMP : Linux, Nginix, MySql, PHP,Pythpn or Perl.
+* LAMP : Linux, Apache, MySql, PHP, Python or Perl.
+* LEMP : Linux, Nginix, MySql, PHP, Python or Perl.
 * MERN : MongoDB, ExpressJS, ReactJS, NodeJS.
 * MEAN : MongoDB, ExpressJS, AngularJS, NodeJS.
 
-Tech Stacks are created dependng on the requiremtns of the web solutions needed. 
-In order to create the LEMP websoltuion , I created a webserver on aws using the UBUNTU 22.4 distrbution awith a private key and set incoming traffic to all because it is a sample infrastructure which would not actually be used but for security purpose it is recommended to leave the default port ec2 comes wkth which is port 22 SSH and provision the required ports only when necessary.
+Tech Stacks are created depending on the requirement of the web solutions needed. 
+In order to create the LEMP websolution , I created a webserver on aws using the UBUNTU 22.4 distribution a with a private key and set incoming traffic to all because it is a sample infrastructure which would not actually be used but for security purpose it is recommended to leave the default port ec2 comes wkth which is port 22 SSH and provision the required ports only when necessary.
 
 # SSH INTO YOUR EC2 USING THE TERMINAL.
 After creating the EC2 web server , i had to ssh into the virtual machine to create the infrasturcture needed for the web solution.
