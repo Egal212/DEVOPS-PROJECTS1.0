@@ -5,7 +5,7 @@ A tech stack is the set of technologies used to develop an application, includin
 * MEAN : MongoDB, ExpressJS, AngularJS, NodeJS.
 
 Tech Stacks are created depending on the requirement of the web solutions needed. 
-In order to create the LEMP websolution , I created a webserver on aws using the UBUNTU 22.4 distribution a with a private key and set incoming traffic to all because it is a sample infrastructure which would not actually be used but for security purpose it is recommended to leave the default port ec2 comes wkth which is port 22 SSH and provision the required ports only when necessary.
+In order to create the LEMP websolution , I created a webserver on aws using the UBUNTU 22.4 distribution a with a private key and set incoming traffic to all because it is a sample infrastructure which would not actually be used but for security purpose it is recommended to leave the default port ec2 comes with which is port 22 SSH and provision the required ports only when necessary.
 
 # SSH INTO YOUR EC2 USING THE TERMINAL.
 After creating the EC2 web server , i had to ssh into the virtual machine to create the infrasturcture needed for the web solution.
