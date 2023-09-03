@@ -1,6 +1,6 @@
 * # INSTALLING MYSQL.
-At this stage we have the web server running , we need to install a database management system(DBMS) to be bale to store and manage data for your site in a relational database.
-My sql is a popular relational database management system used within PHP environment which was used for this Lamp stack project.
+At this stage we have the web server running , we need to install a database management system(DBMS) to store and manage data for your site in a relational database.
+My sql is a popular relational database management system used within PHP environment.
 
 * Use ‘apt’ to acquire and install the software:
 ````
