@@ -1,7 +1,5 @@
 # Creating a pipeline using Aws codepipeline.
-
-# PREQUISTIES.
-### CI/CD means continous integration and continous delivery. They can be refeered to as the continous devlopement or continous software development.
+### CI/CD means continous integration and continous delivery. They can be referred to as the continous developement or continous software development.
 ### CI/CD  pipelines is a practice that can be used to  automate the software delivery process in the software development lifecycle.
 ### CI/CD has become a very important aspect in the world of software development and the way we release new softwares into the world.
 
