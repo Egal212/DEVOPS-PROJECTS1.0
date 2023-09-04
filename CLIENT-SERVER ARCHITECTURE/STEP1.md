@@ -1,4 +1,4 @@
-* Update and Install the Mysql into the server.
+* Update and Install the Mysql into the server software.
   ````
   sudo apt update -y
   sudo apt install mysql-server -y
