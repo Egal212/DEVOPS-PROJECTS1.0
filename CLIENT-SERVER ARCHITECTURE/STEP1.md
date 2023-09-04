@@ -10,7 +10,7 @@
 * Navigate into the Mysql-client server and ssh into it.
     Repeat the ssh process from step0.md
     
-  * Update and Install mysql
+  * Update and Install mysql client software.
       ````
       sudo apt update -y
       ````
