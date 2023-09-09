@@ -11,9 +11,11 @@
   
 * CMD: defines the default executable of a container and argument 9e.g.webservers) You can use CMD to state that you want it to run a certain web server or game server. It can be overridden via docker run parameters. It is also the initial process that runs within the container.
 
-* ENTRYPOINT: does the same as CMD but cannot be overridden. It is used when creating single-purpose image.
+* ENTRYPOINT: does the same as CMD but cannot be overridden. It is used when creating single-purpose images.
 
 * EXPOSE: informs docker what port the container is running on.
+
+* Note: File system layers are seen as single units and can be read from but any write gives into this writable layer and the container sees both of these components as one single file system.
 
   This is an example of a docker file.
   ````
@@ -30,13 +32,13 @@
   COPY and save this file in a text editor. This file will be saved in a folder called app1-2048
   
    # BUILDING DOCKER IMAGES FROM A DOCKER FILE.
-  Move to the folder where you saved the dockerfile
+  Move to the folder where you saved the docker file
   
   This Dockerfile uses the latest version of the nginx image (which includes a configured installation of NGINX)
 
-  It sets metadata maintainer. It then copies all of the 5000/ folder from the localdocker host/client machine into the /usr/share/nginx/html folder within the image.
+  It sets metadata maintainer. It then copies all of the 500folderser from the local docker host/client machine into the /usr/share/nginx/html folder within the image.
 
-Finally we use the EXPOSE directive to inform uses of this image that the appplication is running on tcp/80 and use the CMD statement to set the initial process for containers running from this image.
+Finally, we use the EXPOSE directive to inform users of this image that the application is running on tcp/80 and use the CMD statement to set the initial process for containers running from this image.
 
 To build the image, from the ``app1-2048`` folder we run the docker build command. 
 We use ``-t`` to tag the image with 5000 and use . to set the working directory for the command. 
