@@ -26,8 +26,7 @@ echo -n 'password' | base64
 After creating the encryption I input the encrypted text into the secret config. map and created the secret.
 
 Copy and paste this file to create a secret for the MongoDB deployment you will be creating and name it mongodb-secret.yaml.
-
-``
+```
 apiVersion: v1
 kind: Secret
 metadata:
@@ -42,7 +41,7 @@ Use this command to create the secret:
 ``
 kubectl apply -f mongodb-secret.yaml
 kubectl delete -f mongodb-secret.yaml
-``
+```
 
 ![Screenshot 2023-09-17 at 20 14 26](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/991453ec-1904-4483-bd4a-57acf39528b4)
 
@@ -55,7 +54,7 @@ I created a config. map in a text editor that will be checked into a repository.
 Note: Do not write the username and password of the database or sensitive credentials in the config. map.
 
 Copy and paste this example config.map for MongoDB into the file which I will be calling Mongo.yaml. This file will contain the deployment name, labels, selectors, specification, ports, and database root username and password which was stored in the secret config.map that was created earlier.
-``
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -88,11 +87,12 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
-``
+```
 
 
 This file will be used to create the Mongodb database for deployment.
 Navigate to the terminal into the file and create the deployment using the command:
+
 ``
 kubectl apply -f <mongo.yaml>
 ``
@@ -149,20 +149,25 @@ spec:
       port: 27017
       targetPort: 27017
 ```
-After configuring the service to the deployment file I then created the service without changing the deployment file using this command: 
+After configuring the service to the deployment file I then created the service without changing the deployment file using this command:
+
 ``
 kubectl apply -f <mongo.yaml>
 ``
+
 ![Screenshot 2023-09-17 at 20 26 48](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/9da3872e-47fc-4606-8132-e61adce00fe0)
 
+
 4. Verify the deployment and service using this command:
+   
 ``
 kubectl get all
 ``
 
 ![Screenshot 2023-09-17 at 20 29 09](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/afce236a-d38a-4228-9ba1-a16944c72e7f)
 
-Use this command to confirm that the service is running ont hr right pod.
+Use this command to confirm that the service is running on the right pod.
+
 ``
 kubectl describe service mongodb-service
 kubectl get pod -o wide
