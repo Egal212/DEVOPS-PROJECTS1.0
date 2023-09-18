@@ -8,19 +8,20 @@ I will be creating;
 - Create a secret that contains the database credentials that are used for authentication in the mongo-express and database. This helps to connect the database to the web application.
 
 Confirm all the components that are currently in the kubectl using this command :
+
 ``
 kubectl get all
 ``
-# Create a secret using the secret-config map.
+# 1.Create a secret using the secret-config map.
 In Kubernetes, a Secret is an object that allows you to store and manage sensitive information, such as passwords, API keys, tokens, or any confidential data that your application needs. Secrets are designed to keep this sensitive data secure within a Kubernetes cluster.
 The crypt text was created by running this command:
+
 ``
 echo -n 'username' | base64
 echo -n 'password' | base64
 ``
 
-![Screenshot 2023-09-17 at 20 21 22](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/d9c11ddb-8460-402b-a12c-462fd7cf5f44)
-g base 64 
+![Screenshot 2023-09-17 at 20 21 22](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/d9c11ddb-8460-402b-a12c-462fd7cf5f44) 
 
 After creating the encryption I input the encrypted text into the secret config. map and created the secret.
 
@@ -37,6 +38,7 @@ data:
     mongo-root-password: cGFzc3dvcmQ=
 ``
 Use this command to create the secret:
+
 ``
 kubectl apply -f mongodb-secret.yaml
 kubectl delete -f mongodb-secret.yaml
@@ -48,7 +50,7 @@ kubectl delete -f mongodb-secret.yaml
 
 
 
-# Create a MongoDB Database deployment using Config.map
+# 2. Create a MongoDB Database deployment using Config.map
 I created a config. map in a text editor that will be checked into a repository.
 Note: Do not write the username and password of the database or sensitive credentials in the config. map.
 
@@ -86,7 +88,8 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
-              ``
+``
+
 
 This file will be used to create the Mongodb database for deployment.
 Navigate to the terminal into the file and create the deployment using the command:
@@ -95,6 +98,8 @@ kubectl apply -f <mongo.yaml>
 ``
 
 ![Screenshot 2023-09-17 at 19 47 34](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/6511e6f1-c547-4318-9936-538d567248f5)
+
+# 3.  Create the internal service.
 
 Create the internal service by either creating a separate config.map for the service or adding the service configuration map to the deployment config.map using ---. The file will look like this:
 
@@ -150,7 +155,7 @@ kubectl apply -f <mongo.yaml>
 ``
 ![Screenshot 2023-09-17 at 20 26 48](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/9da3872e-47fc-4606-8132-e61adce00fe0)
 
-Verify the deployment and service using this command:
+4. Verify the deployment and service using this command:
 ``
 kubectl get all
 ``
@@ -165,7 +170,7 @@ kubectl get pod -o wide
 
 ![Screenshot 2023-09-17 at 20 32 41](https://github.com/Egal212/DEVOPS-PROJECTS1.0/assets/114033502/f89189ca-32cc-46ac-a287-7da82c433e9c)
 
-You will notice that the IP address for the MongoDB-service is the same as the mongodb-deployment service.
+You will notice that the IP address for the MongoDB service is the same as the mongodb-deployment service.
 
 
 
