@@ -4,14 +4,14 @@ For example, before you can apply a config. map to a web app you have to create 
 # 5.CREATING A CONFIG.MAP.YAML FOR THE DATABASE.
 Copy and paste this code to create the config.map and name it mongo-configmap.yaml
 
-``
+```
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mongodb-configmap
 data:
   database_url: mongodb-service
-  ``
+  ```
   
   Create the config map by running:
   
@@ -27,7 +27,7 @@ Create the Mongo-express web application deployment by
 Copy and Write the mongo-express.yaml file 
 
 
-``
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -65,7 +65,7 @@ spec:
             configMapKeyRef:
               name: mongodb-configmap
               key: database_url
-  ``
+  ```
 
               
 This file contains the labels, exposes the ports and 
@@ -97,7 +97,8 @@ kubectl logs <deployment-name>
 Next you want to create an external service for that web appl deployment that can connect to the webapp through the browser.
 Copy and paste this config.map tht contains the service you will be creating:
 
-``---
+```
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -111,7 +112,7 @@ spec:
       port: 8081
       targetPort: 8081
       nodePort: 30000
-``
+```
 
 The service details the kind , the service name nd the specification which details the selector with the app anme nd the type which is loadbalancer and the port used and the port number. Another feature it detailed is the nodeport. Nodeport is the port where the external service ip address will be open. It has a range of 30000- 32767.
 
